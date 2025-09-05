@@ -2,8 +2,12 @@
 {
     public class MenuStrings
     {
-        public static StringEntity menuString()
+        public static string menuString()
         {
+            Console.Write("Escreva algo interessante e veja diferentes formas de exibi-lo: ");
+            var text = Console.ReadLine() ?? string.Empty;
+            return text;
+
             //Console.WriteLine("Escolha uma opção:");
             //Console.WriteLine("1 - Método simples (só string)");
             //Console.WriteLine("2 - Usando StringEntity existente");
@@ -33,10 +37,6 @@
             //        Exemplo4_ComValidacao();
             //        break;
             //}
-
-            Console.Write("Escreva algo interessante e veja diferentes formas de exibi-lo: ");
-            var texto = Console.ReadLine() ?? string.Empty;
-            return new StringEntity { Text = texto };
         }
     }
 }

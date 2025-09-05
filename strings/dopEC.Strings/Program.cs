@@ -1,9 +1,15 @@
-﻿Console.WriteLine(" ====== STRINGS MAIS LEGÍVEIS ====== ");
+﻿// Configure o logger
+var stringFactory = new StringFactory();
 
-var stringEntity = MenuStrings.menuString();
+Console.WriteLine(" ====== STRINGS MAIS LEGÍVEIS ====== ");
 
-InterpolacaoComFormat.stringComFormat(stringEntity.Text);
-InterpolacaoComCifrao.stringComCifrao(stringEntity.Text);
+#region INICIALIZA O MENU BASE
+var text = MenuStrings.menuString();
+#endregion
+
+#region INICIALIZA OS METODOS DA STRING
+stringFactory.Execute(text);
+#endregion
 
 Console.WriteLine("Pressione qualquer tecla para fechar ...");
 Console.ReadKey();

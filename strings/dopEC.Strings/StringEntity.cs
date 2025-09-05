@@ -4,8 +4,9 @@
     {
         public string Text { get; set; } = string.Empty;
 
-        public StringEntity()
+        public override string ToString()
         {
+            return Text;
         }
     }
 }
